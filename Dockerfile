@@ -25,32 +25,3 @@ COPY . .
 EXPOSE 9091
 # Run app.py when the container launches
 CMD [ "python" , "app.py", "run", "--host","0.0.0.0"]
-
-# FROM python:3
-# RUN pip install --upgrade pip
-#
-# WORKDIR /app
-#
-# COPY . /app
-# RUN pip install --no-cache-dir -r requirements.txt
-#
-# EXPOSE 4000
-#
-# ENTRYPOINT ['python']
-#
-# CMD ['app.py']
-
-
-# FROM python:3.6
-# RUN pip install --upgrade pip
-#
-# WORKDIR /app
-#
-# COPY . /app
-# RUN pip install -r requirements.txt
-#
-# EXPOSE 4000
-#
-# ENTRYPOINT ['python']
-#
-# CMD ['app.py']
