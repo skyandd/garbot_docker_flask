@@ -1,8 +1,9 @@
-# cat-dog-flask
-cat dog neural network implemented into website using flask
+# GAR (Gender, Age, Race predict)
 
-to run:
-just clone or download 
-open directory in cmd
-and type 'app.py'
-enjoy
+## Build container
+docker build -t <<name_image>>:v1 .
+## Run container
+docker run --name <<container_name>> -p 9091:9091 <<name_image>>:v1
+
+## Open in browser
+localhost:9091
