@@ -1,10 +1,31 @@
-# GAR (Gender, Age, Race predict)
-![](gif.gif)
-## Build container
+# GAR (Gender, Age, Race) predict
+![](content/gif.gif)
+## Что это такое и что оно умеет?
+Это простое flask-приложение с веб-интерфейсом, с возможность запуска внутри docker-контейнера.
+Функционально умеет по фотографии определяет пол, возраст и рассу человека или людей на ней находящихся. 
+
+
+Под капотом OpenCV face recognition + resnet50 c 3 обучеными головами под multitask learning 
+(бинарная, многоклассовая классификация, регрессия).
+
+![](content/model.png)
+
+Подробнее об обучении можно посмотреть в ноутбуке **train_mt_model.ipynb**
+
+## Подводные камни и недостатки.
+1. Довольно примитивный веб-интерфейс.
+2. Плохо определяет возраст, просьба не серьчать.
+3. Некоторые фотки, по какой-то причине, не может декодировать после загрузки и всё падает с соответствующей ошибкой 
+   (это я постараюсь отдебажить).
+
+## Как запустить? (How to start?)
+### Build container
 `docker build -t <<name_image>>:v1 .`
 
-## Run container
+### Run container
 `docker run --name <<container_name>> -p 9091:9091 <<name_image>>:v1`
 
-## Open in browser
+### Open in browser
 `localhost:9091`
+
+
