@@ -1,5 +1,5 @@
 # GAR (Gender, Age, Race predict)
-
+![](gif.gif)
 ## Build container
 docker build -t <<name_image>>:v1 .
 ## Run container
