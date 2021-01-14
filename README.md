@@ -1,4 +1,4 @@
-# GARbot (Gender, Age, Race predict)
+# GAR (Gender, Age, Race predict)
 
 ## Build container
 docker build -t <<name_image>>:v1 .
